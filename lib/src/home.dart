@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'file:///F:/0.github/flutter-getx/lib/src/pages/normal/first.dart';
 import 'package:flutter_getx/src/pages/normal/second.dart';
+import 'package:flutter_getx/src/pages/simple_state_manage.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,7 +33,12 @@ class HomePage extends StatelessWidget {
                 child: Text("동적 URL"),
                 onPressed: () {
                   Get.toNamed("/user/5555?name=굳굳&age=22");
-                })
+                }),
+            MaterialButton(
+                child: Text("단순상태관리"),
+                onPressed: () {
+                  Get.to(SimpleStateManagePage());
+                }),
           ]),
         ));
   }
